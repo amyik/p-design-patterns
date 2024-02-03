@@ -58,3 +58,24 @@ class Chair implements Cloneable{
         }
     }
 }
+
+
+interface MyInterface {
+
+}
+
+class A{
+    boolean isInstaceOfMyInterface() {
+        if (this instanceof MyInterface) {
+            return true;
+        }
+        return false;
+    }
+}
+
+class AA extends A implements MyInterface{
+    boolean isInstaceOfMyInterface() {
+        return super.isInstaceOfMyInterface();
+    }
+
+}

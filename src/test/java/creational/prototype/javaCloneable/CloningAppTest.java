@@ -154,4 +154,11 @@ class CloningAppTest {
         // Q > house.room.char.color == clonedHouse.room.char.color ?????
         // 두 String 객체는 다른 객체일까?, 다른 객체여야 할까?
     }
+
+    @Test
+    @DisplayName("CloneNotSupportedException 발생 시연")
+    void test202402040826() {
+        AA aa = new AA();
+        assertThat(aa.isInstaceOfMyInterface()).isTrue();
+    }
 }
