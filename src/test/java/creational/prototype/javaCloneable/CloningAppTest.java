@@ -93,6 +93,31 @@ class CloningAppTest {
         assertThat(str1 == str2).isFalse(); // 다름
     }
 
+
+
+    @Test
+    @DisplayName("deep copy example")
+    void test202402030829() throws CloneNotSupportedException {
+
+        Chair chair = Chair.builder()
+                .color("red").build();
+
+        Room room = Room.builder().chair(chair).build();
+
+        House house = House.builder()
+                .name("house1")
+                .hasGarden(true)
+                .address(128)
+                .zipCode(128)
+                .room(room).build();
+
+        House clonedHouse = house.clone();
+        clonedHouse.room.chair.color = "blue";
+
+        assertThat(house.room.chair.color)
+                .as("deepCopy실패").isEqualTo("red");
+    }
+
     @Test
     @DisplayName("todo")
     void test202402030704() {
