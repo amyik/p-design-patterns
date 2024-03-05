@@ -1,4 +1,4 @@
-package behavior.bridge.after;
+package structural.bridge.after;
 
 import lombok.RequiredArgsConstructor;
 

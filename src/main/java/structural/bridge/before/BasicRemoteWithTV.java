@@ -1,9 +1,9 @@
-package behavior.bridge.before;
+package structural.bridge.before;
 
 import lombok.Data;
 
 @Data
-public class BasicRemoteWithRadio {
+public class BasicRemoteWithTV {
 
   private boolean on = false;
   private int volume = 30;
@@ -34,7 +34,7 @@ public class BasicRemoteWithRadio {
 
   public void printStatus() {
     System.out.println("------------------------------------");
-    System.out.println("| I'm radio.");
+    System.out.println("| I'm TV set.");
     System.out.println("| I'm " + (on ? "enabled" : "disabled"));
     System.out.println("| Current volume is " + volume + "%");
     System.out.println("| Current channel is " + channel);

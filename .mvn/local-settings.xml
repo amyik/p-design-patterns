@@ -1,0 +1,40 @@
+<settings xmlns="http://maven.apache.org/SETTINGS/1.2.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.2.0 http://maven.apache.org/xsd/settings-1.2.0.xsd">
+
+    <proxies>
+        <proxy>
+            <id>sds-http-proxy</id>
+            <active>true</active>
+            <protocol>http</protocol>
+            <host>70.10.15.10</host>
+            <port>8080</port>
+            <nonProxyHosts>70.*|localhost|127.0.0.1|sdsdev.*</nonProxyHosts>
+        </proxy>
+        <proxy>
+            <id>sds-https-proxy</id>
+            <active>true</active>
+            <protocol>https</protocol>
+            <host>70.10.15.10</host>
+            <port>8080</port>
+            <nonProxyHosts>70.*|localhost|127.0.0.1|sdsdev.*</nonProxyHosts>
+        </proxy>
+    </proxies>
+
+    <mirrors>
+        <mirror>
+            <id>public</id>
+            <name>Maven Repository</name>
+            <url>http://nexus.sdsdev.co.kr:8081/repository/maven-public</url>
+            <mirrorOf>central</mirrorOf>
+        </mirror>
+        <mirror>
+            <id>cicd-nexus-repo-mirror</id>
+            <mirrorOf>cicd-nexus-repo</mirrorOf>
+            <name>cicd Nexus Repository</name>
+            <url>http://70.121.224.52:8081/repository/cicd-maven2-mixed/</url>
+            <blocked>false</blocked>
+        </mirror>
+
+    </mirrors>
+</settings>

@@ -1,4 +1,4 @@
-package behavior.bridge.before;
+package structural.bridge.before;
 
 import lombok.Data;
 
